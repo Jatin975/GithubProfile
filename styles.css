@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #2e2a68 74%);
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem;
+}
+
+#searchBar{
+    background-color: #4c2885;
+    color: white;
+    padding: 0.8rem 0.8rem;
+    border-radius: 10px;
+    margin: 2rem;
+    border: none;
+    font-family: inherit;
+}
+#searchBar::placeholder{
+    color: lightgray;
+}
+#searchBar:active{
+    outline: none;
+    background-color: #4c2885;
+}
+
+#Github-profile{
+    background-color: #4c2885;
+    background-image: linear-gradient(315deg, #4c2885 0%, #4c11ac 100%);
+    border-radius: 20px;
+    box-shadow: 0 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45rem;
+    height: 25rem;
+}
+
+#avatar{
+    float: left;
+    width: 10rem;
+    border-radius: 100%;
+    margin: 2.5rem;
+    box-shadow: 0 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info .following{
+    position: relative;
+    right: 67px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+span{
+    font-weight: bold;
+}
