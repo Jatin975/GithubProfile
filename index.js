@@ -14,6 +14,8 @@ async function getGitHubProfile(username){
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
     getGitHubProfile(searchBar.value)
+    getRepos(searchBar.value);
+    profileContainer.classList.remove('hidden');
 })
 
 function showGitHubProfile(profile){
@@ -30,8 +32,28 @@ function showGitHubProfile(profile){
             <li>${profile.public_repos} <span>Repos</span></li>
         </ul>
         <span>Repos:</span>
+        <div class="profile-repos"></div>
     </div>`;
+
     profileContainer.appendChild(profileInfo);
 }
 
-getGitHubProfile("JayantGoel001");
+
+async function getRepos(username){
+    const resp = await fetch(APIURL+username+'/repos');
+    const respData = await resp.json();
+
+    addToRepos(respData);
+  
+}
+function addToRepos(respData){
+    const Repos = document.querySelector('.profile-repos');
+
+    respData.forEach(repo => {
+        const repoEl = document.createElement('a');
+        repoEl.href = repo.html_url;
+        repoEl.innerText = repo.name;
+        repoEl.target = '_blank';
+        Repos.appendChild(repoEl);
+    });
+}

@@ -44,7 +44,6 @@ body{
     border-radius: 20px;
     box-shadow: 0 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 45rem;
-    height: 25rem;
 }
 
 #avatar{
@@ -65,4 +64,27 @@ body{
 
 span{
     font-weight: bold;
+}
+
+.profile-repos{
+    /* border: 2px solid white; */
+    text-align: left;
+    width: 28rem;
+    margin-left: 15rem;
+    margin-bottom: 3rem;
+}
+
+.profile-repos a{
+    text-decoration: none;
+    border-radius: 8px;
+    color: white;
+    margin: 0.4rem;
+    display: inline-block;
+    padding: 5px;
+    background-color: #2a2a72;
+    box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hidden{
+    display: none;
 }
